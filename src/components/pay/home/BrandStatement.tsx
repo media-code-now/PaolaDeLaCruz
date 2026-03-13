@@ -6,7 +6,7 @@ export default function BrandStatement() {
           {/* Left - Decorative Quote Mark */}
           <div className="md:col-span-2">
             <div className="text-8xl md:text-9xl font-serif text-brand-gold opacity-20 leading-none">
-              "
+              &quot;
             </div>
           </div>
           
@@ -22,7 +22,7 @@ export default function BrandStatement() {
               <footer className="flex items-center space-x-4 pt-4">
                 <div className="h-px flex-1 bg-brand-gray-200"></div>
                 <cite className="not-italic text-sm text-brand-gray-600 font-medium tracking-wide">
-                  Paola "Pay" De La Cruz
+                  Paola &quot;Pay&quot; De La Cruz
                 </cite>
               </footer>
             </blockquote>

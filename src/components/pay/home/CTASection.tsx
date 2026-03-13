@@ -6,12 +6,12 @@ export default function CTASection() {
     <section className="py-32 bg-white">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-brand-black mb-6 leading-tight">
-          Let's start a conversation about your real estate goals.
+          Let&apos;s start a conversation about your real estate goals.
         </h2>
         
         <p className="text-xl text-brand-gray-600 mb-12 max-w-2xl mx-auto">
-          Whether you're considering a move, exploring investment opportunities, or positioning 
-          a property for sale, I'm here to provide strategic guidance.
+          Whether you&apos;re considering a move, exploring investment opportunities, or positioning 
+          a property for sale, I&apos;m here to provide strategic guidance.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

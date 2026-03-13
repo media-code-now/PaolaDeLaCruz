@@ -3,7 +3,7 @@ import { Calendar, User, ArrowRight, TrendingUp, Home, Tag } from "lucide-react"
 
 export const metadata = {
   title: "Blog | Paola De La Cruz | Las Vegas Real Estate Insights",
-  description: "Expert insights, market trends, and real estate tips for Las Vegas from Paola 'Pay' De La Cruz.",
+  description: "Expert insights, market trends, and real estate tips for Las Vegas from Paola &apos;Pay&apos; De La Cruz.",
 };
 
 const blogPosts = [
@@ -276,7 +276,7 @@ export default function BlogPage() {
             Ready to Make Your Move?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your real estate goals and create a winning strategy together.
+            Let&apos;s discuss your real estate goals and create a winning strategy together.
           </p>
           <Link
             href="/contact"

@@ -52,7 +52,7 @@ export default function ContactPage() {
             Contact Me
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Let's discuss your real estate goals and find your perfect property
+            Let&apos;s discuss your real estate goals and find your perfect property
           </p>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function ContactPage() {
               {/* Contact Cards */}
               <div className="bg-white p-8 rounded-2xl shadow-sm">
                 <h2 className="text-2xl font-serif font-bold text-luxury-black mb-6">
-                  Let's Connect
+                  Let&apos;s Connect
                 </h2>
                 
                 <div className="space-y-6">
@@ -165,7 +165,7 @@ export default function ContactPage() {
                     Send a Message
                   </h2>
                   <p className="text-gray-600">
-                    Fill out the form below and I'll get back to you within 24 hours.
+                    Fill out the form below and I&apos;ll get back to you within 24 hours.
                   </p>
                 </div>
 

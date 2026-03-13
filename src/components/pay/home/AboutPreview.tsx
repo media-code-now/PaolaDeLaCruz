@@ -33,12 +33,12 @@ export default function AboutPreview() {
             <div className="space-y-6 text-brand-gray-600 leading-relaxed mb-8">
               <p>
                 With over 12 years navigating the Las Vegas real estate market, 
-                I've built my practice on a simple philosophy: real estate decisions 
+                I&apos;ve built my practice on a simple philosophy: real estate decisions 
                 deserve strategic thinking, not sales pressure.
               </p>
               
               <p>
-                Whether you're relocating from out of state, building an investment 
+                Whether you&apos;re relocating from out of state, building an investment 
                 portfolio, or positioning a property for sale, I provide the market 
                 intelligence and tailored guidance you need to make confident decisions.
               </p>

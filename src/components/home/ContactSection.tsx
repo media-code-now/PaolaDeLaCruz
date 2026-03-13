@@ -37,7 +37,7 @@ export default function ContactSection() {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-luxury-black mb-6 leading-tight">
-            Let's Find Your Dream Home
+            Let&apos;s Find Your Dream Home
           </h2>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
             Reach out today to start your luxury real estate journey

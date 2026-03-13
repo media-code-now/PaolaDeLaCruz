@@ -5,9 +5,9 @@ export default function Philosophy() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Quote Side */}
           <div className="space-y-8">
-            <div className="text-6xl text-brand-gold font-serif">"</div>
+            <div className="text-6xl text-brand-gold font-serif">&quot;</div>
             <blockquote className="font-serif text-3xl md:text-4xl font-light text-brand-black leading-tight">
-              Real estate isn't about pushing properties. It's about understanding people, 
+              Real estate isn&apos;t about pushing properties. It&apos;s about understanding people, 
               markets, and timing.
             </blockquote>
             <div className="h-px w-16 bg-brand-gold"></div>
@@ -50,7 +50,7 @@ export default function Philosophy() {
                 Long-Term Partnership
               </h3>
               <p className="text-brand-gray-600 leading-relaxed">
-                Real estate is a journey. I'm here for strategic counsel today, tomorrow, and beyond the closing table.
+                Real estate is a journey. I&apos;m here for strategic counsel today, tomorrow, and beyond the closing table.
               </p>
             </div>
           </div>

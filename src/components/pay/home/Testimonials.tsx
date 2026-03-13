@@ -45,7 +45,7 @@ export default function Testimonials() {
         <div className="relative min-h-[300px] flex items-center">
           <div className="space-y-8 animate-fade-in" key={currentIndex}>
             <blockquote className="font-serif text-3xl md:text-4xl font-light leading-relaxed">
-              "{testimonials[currentIndex].quote}"
+              &quot;{testimonials[currentIndex].quote}&quot;
             </blockquote>
             
             <div>

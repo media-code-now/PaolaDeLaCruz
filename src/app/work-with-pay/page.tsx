@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, Calendar, MessageSquare, TrendingUp, Users, A
 
 export const metadata = {
   title: "Work With Pay | Paola De La Cruz | Las Vegas Real Estate",
-  description: "Partner with Paola 'Pay' De La Cruz for strategic real estate guidance in Las Vegas. Relocation, investment, and market positioning expertise.",
+  description: "Partner with Paola &apos;Pay&apos; De La Cruz for strategic real estate guidance in Las Vegas. Relocation, investment, and market positioning expertise.",
 };
 
 const services = [
@@ -98,11 +98,11 @@ export default function WorkWithPayPage() {
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
-              Let's Make Your <br />
+              Let&apos;s Make Your <br />
               <span className="text-luxury-gold">Strategic Move</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Whether you're relocating, investing, or positioning your property for sale, 
+              Whether you&apos;re relocating, investing, or positioning your property for sale, 
               I provide the strategic guidance that makes the difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -263,7 +263,7 @@ export default function WorkWithPayPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-600 mb-10">
-              Let's discuss your real estate goals and create a winning strategy together.
+              Let&apos;s discuss your real estate goals and create a winning strategy together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

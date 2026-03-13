@@ -38,11 +38,11 @@ export default function ContactCTA() {
             Get In Touch
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-brand-black mb-6">
-            Let's discuss your real estate goals.
+            Let&apos;s discuss your real estate goals.
           </h2>
           <p className="text-xl text-brand-gray-600 max-w-2xl mx-auto">
-            Whether you're ready to move forward or just exploring options, 
-            I'm here to provide strategic guidance tailored to your situation.
+            Whether you&apos;re ready to move forward or just exploring options, 
+            I&apos;m here to provide strategic guidance tailored to your situation.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export default function ContactCTA() {
               Message Received
             </h3>
             <p className="text-lg text-brand-gray-600 mb-2">
-              Thank you for reaching out. I'll review your message and respond within 24 hours.
+              Thank you for reaching out. I&apos;ll review your message and respond within 24 hours.
             </p>
             <p className="text-sm text-brand-gray-500">
               Check your email for a confirmation.
