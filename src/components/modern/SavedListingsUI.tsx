@@ -59,7 +59,7 @@ export default function SavedListingsUI() {
     setListings(listings.filter((listing) => listing.id !== id));
   };
 
-  const shareList listing = (listing: SavedListing) => {
+  const shareListing = (listing: SavedListing) => {
     if (navigator.share) {
       navigator.share({
         title: listing.title,
