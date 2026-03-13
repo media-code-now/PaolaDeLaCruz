@@ -70,12 +70,13 @@ const getPropertyData = (id: string) => {
   };
 };
 
-export default function PropertyDetailPage({
+export default async function PropertyDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const property = getPropertyData(params.id);
+  const { id } = await params;
+  const property = getPropertyData(id);
 
   return (
     <main className="min-h-screen bg-gray-50">
