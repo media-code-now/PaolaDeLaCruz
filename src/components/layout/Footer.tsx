@@ -3,6 +3,7 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  Twitter,
   Mail,
   Phone,
   MapPin,
@@ -36,10 +37,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/paytherealtor" },
-    { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/PaytheRealtor" },
-    { name: "Google My Business", icon: MapPin, href: "https://share.google/dnKfpIq6vktKMzU0W" },
-    { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/paola-delacruz" },
+    { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
+    { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
+    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
+    { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
   ];
 
   return (
