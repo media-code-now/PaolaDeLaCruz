@@ -1,23 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 
 export default function StudioPage() {
   const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-  const [isRedirecting, setIsRedirecting] = useState(false)
-
-  useEffect(() => {
-    // Redirect to Sanity Studio after a short delay
-    if (projectId) {
-      setIsRedirecting(true)
-      const timeout = setTimeout(() => {
-        // Open in same window
-        window.location.replace(`https://${projectId}.sanity.studio/desk`)
-      }, 500)
-      return () => clearTimeout(timeout)
-    }
-  }, [projectId])
 
   if (!projectId) {
     return (
@@ -114,44 +100,127 @@ NEXT_PUBLIC_SANITY_DATASET=production`}
     )
   }
 
+  const studioUrl = `https://${projectId}.sanity.studio`
+
   return (
     <div style={{
+      padding: '4rem 2rem',
+      textAlign: 'center',
+      minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      minHeight: '100vh',
       background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
       color: '#fff',
-      flexDirection: 'column'
+      fontFamily: 'system-ui, -apple-system, sans-serif'
     }}>
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ maxWidth: '600px' }}>
+        <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📝 Sanity Studio</h1>
+        
         <div style={{
-          fontSize: '3rem',
-          marginBottom: '1rem',
-          animation: 'spin 1s linear infinite',
+          background: 'rgba(255, 255, 255, 0.05)',
+          border: '1px solid rgba(212, 175, 55, 0.3)',
+          borderRadius: '8px',
+          padding: '2rem',
+          marginBottom: '2rem',
+          textAlign: 'left'
         }}>
-          ⟳
-        </div>
-        <h2>Opening Sanity Studio...</h2>
-        <p style={{ color: '#aaa', marginTop: '1rem', marginBottom: '2rem' }}>
-          Redirecting to studio ({isRedirecting ? 'redirecting' : 'initializing'})
-        </p>
-        {isRedirecting && (
-          <p style={{ color: '#999', fontSize: '0.9rem' }}>
-            If not redirected,{' '}
-            <a href={`https://${projectId}.sanity.studio/desk`} 
-               style={{ color: '#d4af37', textDecoration: 'underline' }}>
-              click here
-            </a>
+          <h2 style={{ marginTop: 0, marginBottom: '1rem', color: '#d4af37' }}>
+            ✅ Project Configured
+          </h2>
+          
+          <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
+            Your Sanity project is configured and ready! Click below to access your content studio.
           </p>
-        )}
+
+          <div style={{
+            background: 'rgba(0, 0, 0, 0.3)',
+            padding: '1rem',
+            borderRadius: '4px',
+            marginBottom: '1.5rem',
+            border: '1px solid rgba(212, 175, 55, 0.2)'
+          }}>
+            <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.9rem', color: '#aaa' }}>Project ID:</p>
+            <p style={{ margin: 0, fontFamily: 'monospace', color: '#d4af37', fontSize: '1.1rem' }}>
+              {projectId}
+            </p>
+          </div>
+
+          <ul style={{
+            listStyle: 'none',
+            padding: 0,
+            margin: '1.5rem 0'
+          }}>
+            <li style={{ marginBottom: '0.75rem' }}>
+              ✓ Create and edit blog posts
+            </li>
+            <li style={{ marginBottom: '0.75rem' }}>
+              ✓ Upload and manage images
+            </li>
+            <li style={{ marginBottom: '0.75rem' }}>
+              ✓ Publish content directly
+            </li>
+            <li>
+              ✓ Full content management system
+            </li>
+          </ul>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <a 
+            href={studioUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              padding: '1rem 2rem',
+              background: '#d4af37',
+              color: '#1a1a1a',
+              textDecoration: 'none',
+              borderRadius: '4px',
+              fontWeight: 'bold',
+              fontSize: '1.1rem',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#e8c844'
+              e.currentTarget.style.transform = 'scale(1.05)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#d4af37'
+              e.currentTarget.style.transform = 'scale(1)'
+            }}
+          >
+            🚀 Open Sanity Studio
+          </a>
+          
+          <Link href="/admin/dashboard"
+             style={{
+               display: 'inline-block',
+               padding: '0.75rem 1.5rem',
+               background: 'rgba(255, 255, 255, 0.1)',
+               color: '#d4af37',
+               textDecoration: 'none',
+               borderRadius: '4px',
+               fontWeight: 'bold',
+               border: '1px solid rgba(212, 175, 55, 0.5)',
+               transition: 'all 0.3s ease'
+             }}
+             onMouseEnter={(e) => {
+               e.currentTarget.style.background = 'rgba(212, 175, 55, 0.1)'
+             }}
+             onMouseLeave={(e) => {
+               e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'
+             }}>
+            ← Back to Admin
+          </Link>
+        </div>
+
+        <p style={{ marginTop: '2rem', fontSize: '0.85rem', color: '#999' }}>
+          Studio opens in a new tab. Make sure you&apos;re logged into your Sanity account.
+        </p>
       </div>
-      <style>{`
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-      `}</style>
     </div>
   )
 }
