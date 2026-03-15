@@ -1,9 +1,17 @@
 'use client'
 
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function StudioPage() {
   const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+
+  useEffect(() => {
+    // Redirect to Sanity Studio
+    if (projectId) {
+      window.location.href = `https://${projectId}.sanity.studio/desk`
+    }
+  }, [projectId])
 
   if (!projectId) {
     return (
@@ -101,15 +109,33 @@ NEXT_PUBLIC_SANITY_DATASET=production`}
   }
 
   return (
-    <iframe
-      src={`https://${projectId}.sanity.studio`}
-      title="Sanity Studio"
-      style={{
-        width: '100%',
-        height: '100vh',
-        border: 'none',
-        display: 'block',
-      }}
-    />
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
+      color: '#fff',
+    }}>
+      <div style={{ textAlign: 'center' }}>
+        <div style={{
+          fontSize: '3rem',
+          marginBottom: '1rem',
+          animation: 'spin 1s linear infinite',
+        }}>
+          ⟳
+        </div>
+        <h2>Opening Sanity Studio...</h2>
+        <p style={{ color: '#aaa', marginTop: '1rem' }}>
+          Redirecting to <strong>{projectId}.sanity.studio</strong>
+        </p>
+      </div>
+      <style>{`
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
+    </div>
   )
 }
