@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/cli": "^6.1.5",
+    "@sanity/desk-tool": "^2.36.2",
     "@sanity/image-url": "^2.0.3",
     "@sanity/vision": "^5.16.0",
     "clsx": "^2.1.0",

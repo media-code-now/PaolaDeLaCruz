@@ -1,15 +1,21 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function StudioPage() {
   const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+  const [isRedirecting, setIsRedirecting] = useState(false)
 
   useEffect(() => {
-    // Redirect to Sanity Studio
+    // Redirect to Sanity Studio after a short delay
     if (projectId) {
-      window.location.href = `https://${projectId}.sanity.studio/desk`
+      setIsRedirecting(true)
+      const timeout = setTimeout(() => {
+        // Open in same window
+        window.location.replace(`https://${projectId}.sanity.studio/desk`)
+      }, 500)
+      return () => clearTimeout(timeout)
     }
   }, [projectId])
 
@@ -116,6 +122,7 @@ NEXT_PUBLIC_SANITY_DATASET=production`}
       minHeight: '100vh',
       background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
       color: '#fff',
+      flexDirection: 'column'
     }}>
       <div style={{ textAlign: 'center' }}>
         <div style={{
@@ -126,9 +133,18 @@ NEXT_PUBLIC_SANITY_DATASET=production`}
           ⟳
         </div>
         <h2>Opening Sanity Studio...</h2>
-        <p style={{ color: '#aaa', marginTop: '1rem' }}>
-          Redirecting to <strong>{projectId}.sanity.studio</strong>
+        <p style={{ color: '#aaa', marginTop: '1rem', marginBottom: '2rem' }}>
+          Redirecting to studio ({isRedirecting ? 'redirecting' : 'initializing'})
         </p>
+        {isRedirecting && (
+          <p style={{ color: '#999', fontSize: '0.9rem' }}>
+            If not redirected,{' '}
+            <a href={`https://${projectId}.sanity.studio/desk`} 
+               style={{ color: '#d4af37', textDecoration: 'underline' }}>
+              click here
+            </a>
+          </p>
+        )}
       </div>
       <style>{`
         @keyframes spin {
