@@ -8,6 +8,7 @@ import {
   Phone,
   MapPin,
   Home,
+  Lock,
 } from "lucide-react";
 
 const Footer = () => {
@@ -195,6 +196,16 @@ const Footer = () => {
                   {link.name}
                 </Link>
               ))}
+              
+              {/* Admin Login Button */}
+              <Link
+                href="/admin/login"
+                className="flex items-center space-x-1 text-gray-400 hover:text-luxury-gold transition-colors text-sm group"
+                title="Admin Login"
+              >
+                <Lock className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <span className="hidden sm:inline">Admin</span>
+              </Link>
             </div>
 
             {/* Made with love */}
